@@ -1,0 +1,695 @@
+# Synonym Dict
+#-----------------------------------------------------------------------
+## Motorola domain singles terms
+
+camera,motcamera,cam,camer,camera2,cameraapp,cameraone,cam1,cam2,mcf,motcamera2,motocamera
+focus,refocus
+panned,panning,pans,failure,failing
+beautification,beauty,beaut
+blur,blurry
+launch,open
+
+## Motorola domain multiple terms
+
+mod => mod,amp,mods,amps,motomod,modes,motomods,moto_mode,moto_modes
+amp => mod,amp,mods,amps,motomod,modes,motomods,moto_mode,moto_modes
+mods => mod,amp,mods,amps,motomod,modes,motomods,moto_mode,moto_modes
+amps => amps,mod,amp,mods,motomod,modes,motomods,moto_mode,moto_modes
+motomod => motomod,mod,amp,mods,amps,modes,motomods,moto_mode,moto_modes
+modes => modes,mod,amp,mods,amps,motomod,motomods,moto_mode,moto_modes
+motomods => motomods,mod,amp,mods,amps,motomod,modes,moto_mode,moto_modes
+moto mode => moto_mode,mod,amp,mods,amps,motomod,modes,motomods,moto_modes
+moto modes => moto_modes,mod,amp,mods,amps,motomod,modes,motomods,moto_mode
+
+cardock => car_dock,cardock
+car dock => car_dock,cardock
+
+panorama => panorama,panorama_mode,pano,pano_mod,pano_modes
+pano mod => panorama,panorama_mode,pano,pano_mod,pano_modes
+panorama mode => panorama,panorama_mode,pano,pano_mod,pano_modes
+pano modes => panorama,panorama_mode,pano,pano_mod,pano_modes
+
+rear camera => back_camera,camera_rear,rear_camera
+camera rear => rear_camera,back_camera,camera_rear
+back camera => rear_camera,back_camera,camera_rear
+
+redcarpet => redcarpet,red_carpet,rc,rc_mod,rc_amp,hasselblad,hasselblad_camera,camera_mod
+rc => rc,redCarpet,red_carpet,rc_mod,rc_amp,hasselblad,hasselblad_camera,camera_mod
+red carpet => red_carpet,redCarpet,rc,rc_mod,rc_amp,hasselblad,hasselblad_camera,camera_mod
+rc mod => rc_mod,redCarpet,red_carpet,rc,rc_amp,hasselblad,hasselblad_camera,camera_mod
+rc amp => rc_amp,redCarpet,red_carpet,rc,rc_mod,hasselblad,hasselblad_camera,camera_mod
+hasselblad => hasselblad,redCarpet,red_carpet,rc,rc_mod,rc_amp,hasselblad_camera,camera_mod
+hasselblad camera => hasselblad_camera,redCarpet,red_carpet,rc,rc_mod,rc_amp,hasselblad,camera_mod
+camera mod => camera_mod,redCarpet,red_carpet,rc,rc_mod,rc_amp,hasselblad,hasselblad_camera
+
+frontcamera => frontcamera,front_camera,secondary_camera
+front camera => frontcamera,secondary_camera,front_camera
+secondary camera => front_camera,frontcamera,secondary_camera
+
+professional mode => pro,professional,promode,pro_mode,professional_photo_mode,professional_photo,pro_mod
+pro => pro,professional_mode,professional,promode,pro_mode,professional_photo_mode,professional_photo,pro_mod
+professional => professional,professional_mode,pro,promode,pro_mode,professional_photo_mode,professional_photo,pro_mod
+promode => promode,professional_mode,pro,professional,pro_mode,professional_photo_mode,professional_photo,pro_mod
+pro mod => professional_mode,pro,professional,promode,pro_mode,professional_photo_mode,professional_photo,pro_mod
+professional photo => professional_mode,pro,professional,promode,pro_mode,professional_photo_mode,professional_photo,pro_mod
+professional photo mode => professional_mode,pro,professional,promode,pro_mode,professional_photo_mode,professional_photo,pro_mod
+pro mode => professional_mode,pro,professional,promode,pro_mode,professional_photo_mode,professional_photo,pro_mod
+
+professional settings => professional_settings,pro_mode_setting,pro_mode_settings,pro_settings,pro_setting
+pro mode setting => professional_settings,pro_mode_setting,pro_mode_settings,pro_settings,pro_setting
+pro mode settings => professional_settings,pro_mode_setting,pro_mode_settings,pro_settings,pro_setting
+pro settings => professional_settings,pro_mode_setting,pro_mode_settings,pro_settings,pro_setting
+pro setting => professional_settings,pro_mode_setting,pro_mode_settings,pro_settings,pro_setting
+
+camera mode => picture,photo,image,photography,photo_mode,camera_mode
+photo mode => picture,photo,image,photography,photo_mode,camera_mode
+picture => picture,photo,image,photography,photo_mode,camera_mode
+photo => picture,photo,image,photography,photo_mode,camera_mode
+image => picture,photo,image,photography,photo_mode,camera_mode
+photography => picture,photo,image,photography,photo_mode,camera_mode
+
+video => video_mode,camcorder,video
+video mode => video,video_mode,camcorder
+camcorder => video,video_mode,camcorder
+
+flash light => flashlight,torch,flash,flash_light,autoflash,auto_flash,flash_torch
+auto flash => flashlight,torch,flash,flash_light,autoflash,auto_flash,flash_torch
+flashlight => flashlight,torch,flash,flash_light,autoflash,auto_flash,flash_torch
+torch => flashlight,torch,flash,flash_light,autoflash,auto_flash,flash_torch
+flash => flashlight,torch,flash,flash_light,autoflash,auto_flash,flash_torch
+autoflash => flashlight,torch,flash,flash_light,autoflash,auto_flash,flash_torch
+flash torch => flashlight,torch,flash,flash_light,autoflash,auto_flash,flash_torch
+
+HDR => Auto_HDR,ihdr,HDR
+ihdr => HDR,Auto_HDR,ihdr
+Auto HDR => HDR,Auto_HDR,ihdr
+
+viewfinder => viewfinder,view_finder,vf,screen_display
+view finder => viewfinder,view_finder,vf,screen_display
+screen display => viewfinder,view_finder,vf,screen_display
+vf => viewfinder,view_finder,vf,screen_display
+
+burst => burst_shot,continuous_shooting,continuous_shoot,burst,multishot,multi_shot,burst_mode,burst_capture
+multishot => burst_shot,continuous_shooting,continuous_shoot,burst,multishot,multi_shot,burst_mode,burst_capture
+burst shot => burst_shot,continuous_shooting,continuous_shoot,burst,multishot,multi_shot,burst_mode,burst_capture
+continuous shooting => burst_shot,continuous_shooting,continuous_shoot,burst,multishot,multi_shot,burst_mode,burst_capture
+continuous shoot => burst_shot,continuous_shooting,continuous_shoot,burst,multishot,multi_shot,burst_mode,burst_capture
+multi shot => burst_shot,continuous_shooting,continuous_shoot,burst,multishot,multi_shot,burst_mode,burst_capture
+burst mode => burst_shot,continuous_shooting,continuous_shoot,burst,multishot,multi_shot,burst_mode,burst_capture
+burst capture => burst_shot,continuous_shooting,continuous_shoot,burst,multishot,multi_shot,burst_mode,burst_capture
+
+display => display,aod,moto_display
+aod => display,aod,moto_display
+moto display => display,aod,moto_display
+
+chop twice => chop_twice,chop_chop
+chop chop => chop_twice,chop_chop
+
+quickdraw => quickdraw,twist_for_quick,twist_twice,quick_capture,quick_draw,karate,twist_capture,twisting,twice_quickly
+twist for quick => quickdraw,twist_for_quick,twist_twice,quick_capture,quick_draw,karate,twist_capture,twisting,twice_quickly
+twist twice => quickdraw,twist_for_quick,twist_twice,quick_capture,quick_draw,karate,twist_capture,twisting,twice_quickly
+quick capture => quickdraw,twist_for_quick,twist_twice,quick_capture,quick_draw,karate,twist_capture,twisting,twice_quickly
+quick draw => quickdraw,twist_for_quick,twist_twice,quick_capture,quick_draw,karate,twist_capture,twisting,twice_quickly
+twist capture => quickdraw,twist_for_quick,twist_twice,quick_capture,quick_draw,karate,twist_capture,twisting,twice_quickly
+twice quickly => quickdraw,twist_for_quick,twist_twice,quick_capture,quick_draw,karate,twist_capture,twisting,twice_quickly
+karate => quickdraw,twist_for_quick,twist_twice,quick_capture,quick_draw,karate,twist_capture,twisting,twice_quickly
+twisting => quickdraw,twist_for_quick,twist_twice,quick_capture,quick_draw,karate,twist_capture,twisting,twice_quickly
+
+microscreen => microscreen,micro_screen,shrink_screen,swipe_shrink,mot_microscreen,microdisplay,micro_display
+micro screen => microscreen,micro_screen,shrink_screen,swipe_shrink,mot_microscreen,microdisplay,micro_display
+shrink screen => microscreen,micro_screen,shrink_screen,swipe_shrink,mot_microscreen,microdisplay,micro_display
+swipe shrink => microscreen,micro_screen,shrink_screen,swipe_shrink,mot_microscreen,microdisplay,micro_display
+mot microscreen => microscreen,micro_screen,shrink_screen,swipe_shrink,mot_microscreen,microdisplay,micro_display
+microdisplay => microscreen,micro_screen,shrink_screen,swipe_shrink,mot_microscreen,microdisplay,micro_display
+micro display => microscreen,micro_screen,shrink_screen,swipe_shrink,mot_microscreen,microdisplay,micro_display
+
+stabilization => video_stabilization,stabilization,stab,vstab
+video stabilization => video_stabilization,stabilization,stab,vstab
+stab => video_stabilization,stabilization,stab,vstab
+vstab => video_stabilization,stabilization,stab,vstab
+
+slowmotion => slow_motion,slowmotion
+slow motion => slow_motion,slowmotion
+
+ROI => AF_AE,TTE_ROI,ROI
+AF AE => ROI,AF_AE,TTE_ROI
+TTE ROI => ROI,AF_AE,TTE_ROI
+
+fingerprint => finger_print,fingerprint,fps,finger_print_sensor,fingerprint_sensor
+finger print => fingerprint,finger_print,fps,finger_print_sensor,fingerprint_sensor
+fps => fingerprint,finger_print,fps,finger_print_sensor,fingerprint_sensor
+finger print sensor => finger_print,fingerprint,fps,finger_print_sensor,fingerprint_sensor
+fingerprint sensor => finger_print,fingerprint,fps,finger_print_sensor,fingerprint_sensor
+
+homescreen => home_screen,homescreen
+home screen => home_screen,homescreen
+
+lockscreen => lock_screen,lockscreen
+lock screen => lock_screen,lockscreen
+
+split screen => split_screen,splitscreen,split_screen_mode,split_mode_screens,split_window,multiwindow,multi_window_screen,multi_window
+splitscreen => split_screen,splitscreen,split_screen_mode,split_mode_screens,split_window,multiwindow,multi_window_screen,multi_window
+split screen mode => split_screen,splitscreen,split_screen_mode,split_mode_screens,split_window,multiwindow,multi_window_screen,multi_window
+split mode screens => split_screen,splitscreen,split_screen_mode,split_mode_screens,split_window,multiwindow,multi_window_screen,multi_window
+split window => split_screen,splitscreen,split_screen_mode,split_mode_screens,split_window,multiwindow,multi_window_screen,multi_window
+multi window screen => split_screen,splitscreen,split_screen_mode,split_mode_screens,split_window,multiwindow,multi_window_screen,multi_window
+multi window => split_screen,splitscreen,split_screen_mode,split_mode_screens,split_window,multiwindow,multi_window_screen,multi_window
+multiwindow => split_screen,splitscreen,split_screen_mode,split_mode_screens,split_window,multiwindow,multi_window_screen,multi_window
+
+third party => third_party,3rd_party,3rd_party_app,3rd_party_apps
+3rd party => third_party,3rd_party,3rd_party_app,3rd_party_apps
+3rd party app => third_party,3rd_party,3rd_party_app,3rd_party_apps
+3rd party apps => third_party,3rd_party,3rd_party_app,3rd_party_apps
+
+simcard => sim_card,simcard,simcards
+simcards => sim_card,simcard,simcards
+sim card => sim_card,simcard,simcards
+
+dual sim => dual_sim,dualsim
+dualsim => dual_sim,dualsim
+
+back key => back_button,back_key
+back button => back_key,back_button
+
+360mod => 360mod,360_camera,360_mod,360_mods,mod_360,360_amp,amp_360,360_camera_amp,360camera,360_cam,moto_360,360mods,moto_360_camera,moto360,camera_360_mod
+360 camera => 360mod,360_camera,360_mod,360_mods,mod_360,360_amp,amp_360,360_camera_amp,360camera,360_cam,moto_360,360mods,moto_360_camera,moto360,camera_360_mod
+360 mod => 360mod,360_camera,360_mod,360_mods,mod_360,360_amp,amp_360,360_camera_amp,360camera,360_cam,moto_360,360mods,moto_360_camera,moto360,camera_360_mod
+360 mods => 360mod,360_camera,360_mod,360_mods,mod_360,360_amp,amp_360,360_camera_amp,360camera,360_cam,moto_360,360mods,moto_360_camera,moto360,camera_360_mod
+mod 360 => 360mod,360_camera,360_mod,360_mods,mod_360,360_amp,amp_360,360_camera_amp,360camera,360_cam,moto_360,360mods,moto_360_camera,moto360,camera_360_mod
+360 amp => 360mod,360_camera,360_mod,360_mods,mod_360,360_amp,amp_360,360_camera_amp,360camera,360_cam,moto_360,360mods,moto_360_camera,moto360,camera_360_mod
+amp 360 => 360mod,360_camera,360_mod,360_mods,mod_360,360_amp,amp_360,360_camera_amp,360camera,360_cam,moto_360,360mods,moto_360_camera,moto360,camera_360_mod
+360 camera amp => 360mod,360_camera,360_mod,360_mods,mod_360,360_amp,amp_360,360_camera_amp,360camera,360_cam,moto_360,360mods,moto_360_camera,moto360,camera_360_mod
+360 cam => 360mod,360_camera,360_mod,360_mods,mod_360,360_amp,amp_360,360_camera_amp,360camera,360_cam,moto_360,360mods,moto_360_camera,moto360,camera_360_mod
+moto 360 => 360mod,360_camera,360_mod,360_mods,mod_360,360_amp,amp_360,360_camera_amp,360camera,360_cam,moto_360,360mods,moto_360_camera,moto360,camera_360_mod
+moto 360 camera => 360mod,360_camera,360_mod,360_mods,mod_360,360_amp,amp_360,360_camera_amp,360camera,360_cam,moto_360,360mods,moto_360_camera,moto360,camera_360_mod
+moto360 => 360mod,360_camera,360_mod,360_mods,mod_360,360_amp,amp_360,360_camera_amp,360camera,360_cam,moto_360,360mods,moto_360_camera,moto360,camera_360_mod
+360camera => 360mod,360_camera,360_mod,360_mods,mod_360,360_amp,amp_360,360_camera_amp,360camera,360_cam,moto_360,360mods,moto_360_camera,moto360,camera_360_mod
+360mods => 360mod,360_camera,360_mod,360_mods,mod_360,360_amp,amp_360,360_camera_amp,360camera,360_cam,moto_360,360mods,moto_360_camera,moto360,camera_360_mod
+camera 360 mod => 360mod,360_camera,360_mod,360_mods,mod_360,360_amp,amp_360,360_camera_amp,360camera,360_cam,moto_360,360mods,moto_360_camera,moto360,camera_360_mod
+
+
+moto mod projector => moto_mod_projector,projector_mod,projector,mod_projector
+projector mod => moto_mod_projector,projector_mod,projector,mod_projector
+projector => moto_mod_projector,projector_mod,projector,mod_projector
+mod projector => moto_mod_projector,projector_mod,projector,mod_projector
+
+dtv => dtv,digital_tv,digital_tv_app
+digital tv => dtv,digital_tv,digital_tv_app
+digital tv app => dtv,digital_tv,digital_tv_app
+
+## Technical Geral domain single terms
+GB,gib,gigabyte,gigabytes
+MB,mib,megabyte,megabytes
+Television,Televisions,TV,TVs
+work,functioning
+way,path,route,road
+take,capture
+wrong,incorrect,mistaken
+dark,black,shadow,darkness,blackness
+help,support
+location,place,position,area,region,localization
+stop,end,quit,finish
+show,display,appear,present,demonstrate
+bug,glitches,glitch,defect,problem,flaw,shortcoming,blemish,fault
+vzw,verizon
+fb,facebook
+instagram,instagran
+bt,bluetooth
+
+## Technical Geral domain multiple terms
+
+wifi => wifi,wi_fi
+wi fi => wifi,wi_fi
+
+antivirus = >antivirus,anti_virus
+anti virus => antivirus,anti_virus
+
+demomode => demomode,demo_mode
+demo mode => demomode,demo_mode
+
+fmradio => fmradio,fm_radio,fm_radio_app,fm_player,fm_radio_player,fm_app,fm,radio_app
+fm radio => fmradio,fm_radio,fm_radio_app,fm_player,fm_radio_player,fm_app,fm,radio_app
+fm radio app => fmradio,fm_radio,fm_radio_app,fm_player,fm_radio_player,fm_app,fm,radio_app
+fm player => fmradio,fm_radio,fm_radio_app,fm_player,fm_radio_player,fm_app,fm,radio_app
+fm radio player => fmradio,fm_radio,fm_radio_app,fm_player,fm_radio_player,fm_app,fm,radio_app
+fm => fmradio,fm_radio,fm_radio_app,fm_player,fm_radio_player,fm_app,fm,radio_app
+fm app => fmradio,fm_radio,fm_radio_app,fm_player,fm_radio_player,fm_app,fm,radio_app
+radio app => fmradio,fm_radio,fm_radio_app,fm_player,fm_radio_player,fm_app,fm,radio_app
+
+popup => popup,pop_up
+pop up => popup,pop_up
+
+status bar => statusbar,status_bar
+statusbar => statusbar,status_bar
+
+airplane mode => airplane_mode,airplane,air_plane_mode,air_plane
+airplane => airplane,air_plane_mode,air_plane
+air plane mode => airplane_mode,airplane,air_plane_mode,air_plane
+air plane => airplane_mode,airplane,air_plane_mode,air_plane
+
+whatsapp => whats_app,whatsapp
+whats_app => whatsapp,whats_app
+
+MP => mega_pixels,megapixel,mp
+megapixel => MP,mega_pixels,megapixel
+mega pixels => MP,megapixel,mega_pixels
+
+forceclose => fc,force_close,forceclose
+force close => fc,forceclose,force_close
+
+motoguard => moto_guard,motoguard
+moto guard => motoguard,moto_guard
+
+motosound => moto_sound,motosound
+moto sound => motosound,moto_sound
+
+moto alexa => motoalexa,moto_alexa,alexa
+motoalexa => motoalexa,moto_alexa,alexa
+alexa => motoalexa,moto_alexa,alexa
+
+alexa mod => alexa_mod,alexa_mods,alexa_moto_mod
+alexa mods => alexa_mod,alexa_mods,alexa_moto_mod
+alexa moto mod => alexa_mod,alexa_mods,alexa_moto_mod
+
+motokey => moto_key,motokey
+moto key => motokey,moto_key
+
+moto actions => moto_actions,moto_action,motoactions,motoaction
+moto action => moto_actions,moto_action,motoactions,motoaction
+motoactions => moto_actions,moto_action,motoactions,motoaction
+motoaction => moto_actions,moto_action,motoactions,motoaction
+
+motohide => motohide,moto_hide
+moto hide => motohide,moto_hide
+
+motodisplay => moto_display,motodisplay
+moto display => motodisplay,moto_display
+
+nightly display => nightly_display,night_display,nightdisplay
+night display => nightly_display,night_display,nightdisplay
+nightdisplay => nightly_display,night_display,nightdisplay
+
+motovoice => talk_to_me,moto_talk,mototalk,moto_voice_talk,motovoice
+talk to me => talk_to_me,moto_talk,mototalk,moto_voice_talk,motovoice
+moto talk => talk_to_me,moto_talk,mototalk,moto_voice_talk,motovoice
+mototalk => talk_to_me,moto_talk,mototalk,moto_voice_talk,motovoice
+moto voice talk => talk_to_me,moto_voice_talk,mototalk,moto_voice_talk,motovoice
+
+moto live stream => moto_live,moto_live_stream,moto_live_stream_app,moto_live_app,motolive
+moto live => moto_live,moto_live_stream,moto_live_stream_app,moto_live_app,motolive
+moto live stream app => moto_live,moto_live_stream,moto_live_stream_app,moto_live_app,motolive
+moto live app => moto_live,moto_live_stream,moto_live_stream_app,moto_live_app,motolive
+motolive => moto_live,moto_live_stream,moto_live_stream_app,moto_live_app,motolive
+
+googlephoto => googlephoto,google_photos,gphoto,gphotos,google_photo
+google photos => googlephoto,google_photos,gphoto,gphotos,google_photo
+google photo => googlephoto,google_photos,gphoto,gphotos,google_photo
+gphoto => googlephoto,google_photos,gphoto,gphotos,google_photo
+gphotos => googlephoto,google_photos,gphoto,gphotos,google_photo
+
+anr => anr,app_not_responding,not_respond,anrs,not_responding,application_not_responding,application_not_respond,stopped_responding,stop_responding,stop_respond,stops_respond,stops_responding
+app not responding => anr,app_not_responding,not_respond,anrs,not_responding,application_not_responding,application_not_respond,stopped_responding,stop_responding,stop_respond,stops_respond,stops_responding
+not respond => anr,app_not_responding,not_respond,anrs,not_responding,application_not_responding,application_not_respond,stopped_responding,stop_responding,stop_respond,stops_respond,stops_responding
+not responding => anr,app_not_responding,not_respond,anrs,not_responding,application_not_responding,application_not_respond,stopped_responding,stop_responding,stop_respond,stops_respond,stops_responding
+application not responding => anr,app_not_responding,not_respond,anrs,not_responding,application_not_responding,application_not_respond,stopped_responding,stop_responding,stop_respond,stops_respond,stops_responding
+application not respond => anr,app_not_responding,not_respond,anrs,not_responding,application_not_responding,application_not_respond,stopped_responding,stop_responding,stop_respond,stops_respond,stops_responding
+stopped responding => anr,app_not_responding,not_respond,anrs,not_responding,application_not_responding,application_not_respond,stopped_responding,stop_responding,stop_respond,stops_respond,stops_responding
+stop responding => anr,app_not_responding,not_respond,anrs,not_responding,application_not_responding,application_not_respond,stopped_responding,stop_responding,stop_respond,stops_respond,stops_responding
+stop respond => anr,app_not_responding,not_respond,anrs,not_responding,application_not_responding,application_not_respond,stopped_responding,stop_responding,stop_respond,stops_respond,stops_responding
+anrs => anr,app_not_responding,not_respond,anrs,not_responding,application_not_responding,application_not_respond,stopped_responding,stop_responding,stop_respond,stops_respond,stops_responding
+stops respond =>  anr,app_not_responding,not_respond,anrs,not_responding,application_not_responding,application_not_respond,stopped_responding,stop_responding,stop_respond,stops_respond,stops_responding
+stops responding =>  anr,app_not_responding,not_respond,anrs,not_responding,application_not_responding,application_not_respond,stopped_responding,stop_responding,stop_respond,stops_respond,stops_responding
+
+control bar => control_bar,adjustment_bar
+adjustment bar => control_bar,adjustment_bar
+
+chrome => google_chrome,chrome_browser,chrome
+google chrome => chrome,google_chrome,chrome_browser
+chrome browser => chrome,google_chrome,chrome_browser
+
+chromecast => chromecast,chrome_cast
+chrome cast => chromecast,chrome_cast
+
+google play => google_play,google_play_store,play_store,gms_play_store,gms_google_play,google_play_app
+google play store => google_play,google_play_store,play_store,gms_play_store,gms_google_play,google_play_app
+play store => google_play,google_play_store,play_store,gms_play_store,gms_google_play,google_play_app
+gms play store => google_play,google_play_store,play_store,gms_play_store,gms_google_play,google_play_app
+gms google play => google_play,google_play_store,play_store,gms_play_store,gms_google_play,google_play_app
+google play app => google_play,google_play_store,play_store,gms_play_store,gms_google_play,google_play_app
+
+google duo => google_duo,duo_app,duo_video,google_duo_app
+duo app => google_duo,duo_app,duo_video,google_duo_app
+duo video => google_duo,duo_app,duo_video,google_duo_app
+google duo app => google_duo,duo_app,duo_video,google_duo_app
+
+play music => play_music,google_play_music,google_music,gms_play_music
+google play music => play_music,google_play_music,google_music,gms_play_music
+google music => play_music,google_play_music,google_music,gms_play_music
+gms play music => play_music,google_play_music,google_music,gms_play_music
+
+play movies => play_movies,google_play_movies,google_movies,gms_play_movies
+google play movies => play_movies,google_play_movies,google_movies,gms_play_movies
+google movies => play_movies,google_play_movies,google_movies,gms_play_movies
+gms play movies => play_movies,google_play_movies,google_movies,gms_play_movies
+
+play games => play_games,google_play_games,gms_play_games
+google play games => play_games,google_play_games,gms_play_games
+gms play games => play_games,google_play_games,gms_play_games
+
+play books => play_books,google_play_books,gms_play_books,google_books,google_play_book
+google play books => play_books,google_play_books,gms_play_books,google_books,google_play_book
+gms play books => play_books,google_play_books,gms_play_books,google_books,google_play_book
+google books => play_books,google_play_books,gms_play_books,google_books,google_play_book
+google play book => play_books,google_play_books,gms_play_books,google_books,google_play_book
+
+fb live => fb_live,facebook_live_stream,facebook_live,facebook_live_transmissions,facebook_live_transmission,facebook_live_streaming,fb_live_streaming,fb_live_stream,fb_stream
+facebook live stream => fb_live,facebook_live_stream,facebook_live,facebook_live_transmissions,facebook_live_transmission,facebook_live_streaming,fb_live_streaming,fb_live_stream,fb_stream
+facebook live => fb_live,facebook_live_stream,facebook_live,facebook_live_transmissions,facebook_live_transmission,facebook_live_streaming,fb_live_streaming,fb_live_stream,fb_stream
+facebook live transmissions => fb_live,facebook_live_stream,facebook_live,facebook_live_transmissions,facebook_live_transmission,facebook_live_streaming,fb_live_streaming,fb_live_stream,fb_stream
+facebook live transmission => fb_live,facebook_live_stream,facebook_live,facebook_live_transmissions,facebook_live_transmission,facebook_live_streaming,fb_live_streaming,fb_live_stream,fb_stream
+fb live streaming => fb_live,facebook_live_stream,facebook_live,facebook_live_transmissions,facebook_live_transmission,facebook_live_streaming,fb_live_streaming,fb_live_stream,fb_stream
+facebook live streaming => fb_live,facebook_live_stream,facebook_live,facebook_live_transmissions,facebook_live_transmission,facebook_live_streaming,fb_live_streaming,fb_live_stream,fb_stream
+fb live stream => fb_live,facebook_live_stream,facebook_live,facebook_live_transmissions,facebook_live_transmission,facebook_live_streaming,fb_live_streaming,fb_live_stream,fb_stream
+fb stream => fb_live,facebook_live_stream,facebook_live,facebook_live_transmissions,facebook_live_transmission,facebook_live_streaming,fb_live_streaming,fb_live_stream,fb_stream
+## Numbers
+1,one
+2,two
+3,three
+4,four
+5,five
+6,six
+7,seven
+8,eight
+9,nine
+10,ten
+
+##English Synonyms
+apart,separate
+across,throught
+about,approximately
+accomplish,achieve
+almost,nearly
+animated,lively
+annoy,irritate
+answer,reply
+apparent,obvious
+appear,seem
+arise,occur
+arrive,reach
+artful,crafty
+assure,guarantee
+attractive,appealing
+available,disposable
+away,absent
+awful,terrible
+backside,behind,bottom
+bad,not_good
+beat,defeat
+begin,start
+bendy,flexible
+bizarre,weird
+blink,flicker,flutter,sparkle,glint,gleam,flashes
+break,pause
+business,commerce,trade
+categorize,classify
+change,switch,shift
+chiefly,mainly
+chop,cut
+chiefly,mainly
+citation,quotation
+cite,quote
+clever,intelligent
+close,shut
+collect,gather
+complete,total,full
+confine,restrict
+conflict,clash
+confuse => mix_up
+mix up => confuse,mix_up
+constant,fixed
+contrary,opposite
+continuous => non_stop,continuous
+non stop => continuous,non_stop
+convey,communicate
+cope,manage
+correct,right
+deduce,infer
+defective,faulty
+delicate,fragile
+denote,indicate,represent
+deprave,corrupt
+destiny,fate
+detached,indifferent
+diminish,decrease
+disagreeable,unpleasant
+disappear,vanish
+disaster,catastrophe
+disclaim,deny
+disclose,reveal
+discount,reduction
+dubious,doubtful
+ecocnomic,profitable
+elevate,raise,promote
+enormous,huge,immense,large,vast
+enquire,investigate
+equity,fairness
+essential,fundamental
+evaluate,assess
+everlasting,eternal,infinity
+exactly,precisely
+extra,additional
+fabricate,manufacture
+famous,famed,renowned
+fantastic,great,brilliant
+fast,quickly,rapid,swift,speedy,quick
+foretell,predict
+fortunate,lucky
+garbage,rubbish,trashcan
+glitter,sparkle
+gratis,free
+hall,corridor
+happily,fortunately
+hard,tough
+if,whether
+ignore,disregard
+illuminate => clarify,light_up,illuminate
+light up => illuminate,clarify,light_up
+clarify => illuminate,light_up,clarify
+illustrate,demonstrate
+imagine,suppose,assume
+imitate,mimic
+immediate,instant
+immobile,motionless
+impact,affect
+impartial,neutral
+impasse,deadlock
+impediment,obstacle
+infectc,contaminate
+inflexible,rigid
+inflow,influx
+informal,casual
+infrequent,rare
+inheritor,heir
+innocent,harmless
+inspect,examine
+instructions,directions
+insufficient,inadequate
+insupportable,intolerable
+intensify,heighten
+isolated,lonely
+lacking,missing
+last,final
+learn,memorize
+lousy,awful
+lucid,clear
+manmade,artifical
+mannered,polite
+maybe,perhaps,possibly
+midway,halfway
+missing,lost
+movie,film
+nameless,anonymous
+necessary,essential
+notify,inform
+numerous,many
+obligatory,compulsory
+obsolete => out_of_date,deprecated,obsolete
+out of date => obsolete,out_of_date,deprecated
+deprecated => obsolete,out_of_date,deprecated
+outside,external
+overseas,abroad
+oversee,supervise
+particular,specific
+passable,satisfactory
+perception,insight
+possibility,opportunity
+precept,principle
+pressing,urgent
+previous,preceding
+priority,precedence
+provide,supply
+prompt,immediate
+quake,tremble
+quite,fairly
+reasonable,fair
+receive,get
+reliable,dependable
+remorse,regret
+remoted,isolated
+removable,detachable
+respond,reply
+rubbish,nonsense
+satisfied,convinced
+scarcity,shortage
+select,choose,choice
+signal,sign
+significant,meaningful
+sincere,honest
+stable,steady
+suggest,propose
+sure,certain
+symbolize,represent
+today,nowadays
+touchy,sensitive
+transform,convert
+trustworthy,reliable
+twosome,pair
+ultimate,final
+uncommon,unusual
+undeniable,indisputable
+understandable,comprehensible
+unforeseen,unexpected
+unhurt,unharmed
+unstated,unspoken
+untimely,premature
+unusual,strange
+unvoiced,voiceless
+usually,generally,normally
+vacancy,emptiness,empty
+valueless,worthless
+vanquish,conquer
+vary,differ
+visualize,see,look,observe,check,verify
+withstand,resist
+warranty,guarantee
+
+##Irregular Verbs synonyms
+arise,arose,arisen
+awake,awoke,awoken
+be,was,been,were
+beat,beat,beaten
+become,became
+begin,began,begun
+bend,bent
+bite,bit,bitten
+bleed,bled
+blow,blew,blown
+break,broke,broken
+bring,brought
+build,built
+buy,bought
+burn,burnt,burned
+catch,caught
+choose,chose,chosen
+come,came
+deal,dealt
+do,did,done
+dig,dug
+draw,drew,drawn
+dream,dreamt,dreamed
+drink,drank,drunk
+drive,drove,driven
+eat,ate,eaten
+fall,fell,fallen
+feed,fed
+feel,felt
+fight,fought
+find,found
+fly,flew,flown
+forget,forgot,forgotten
+forgive,forgave,forgiven
+freeze,froze,frozen
+get,got,gotten
+give,gave,given
+go,went,gone
+grow,grew,grown
+hang,hung
+have,had
+hear,heard
+hide,hid,hidden
+hold,held
+keep,kept
+know,knew,known
+lay,laid
+lead,led
+lean,leant,leaned
+lend,lent
+lie,lay,lain
+light,lit
+lose,lost
+make,made
+mean,meant
+meet,met
+overtake,overtook,overtaken
+overcome,overcame
+pay,paid
+ride,rode,ridden
+ring,rang,rung
+rise,rose,risen
+run,ran
+say,said
+see,saw,seen
+sell,sold
+send,sent
+shake,shook,shaken
+shine,shone,shone
+steal,stole,stolen
+shine,shone
+shoe,shod
+shoot,shot
+show,showed,shown
+sing,sang,sung
+sink,sank,sunk
+sit,sat
+shrink,shrank,shrunk
+sleep,slept
+slide,slid
+speak,spoke,spoken
+spend,spent
+speed,sped
+spring,sprang,sprung
+spill,spilt,spilled
+stand,stood
+stink,stank,stunk
+sting,stung
+steal,stole,stolen
+strive,strove,striven
+strike,struck
+swear,swore,sworn
+sweep,swept
+swim,swam,swum
+swing,swung
+take,took,taken
+teach,taught
+tear,tore,torn
+tell,told
+think,thought
+throw,threw,thrown
+tread,trod,trodden
+understand,understood
+undergo,underwent,undergone
+uphold,upheld,upheld
+wake,woke,woken
+wear,wore,worn
+weave,wove,woven
+win,won
+wind,wound
+write,wrote,written
+burn,burnt
+dream,dreamt
+learn,learnt
+smell,smelt
+spell,spelt
+
+
+
