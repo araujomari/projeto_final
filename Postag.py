@@ -54,9 +54,15 @@ def concat_list(lista):
 	return result
 	
 def postaging(sentence):
-	var_stops = remove_stop_words(sentence)
-	var_clear = clean_text(var_stops)
-	var_tokens = wordpunct_tokenize(var_clear)
+	var_clear = []
+	for item in sentence:
+		var_clear.append(clean_text(item))		
+
+	var_stops = ""
+	for item in var_clear:
+		var_stops += " " + remove_stop_words(item)
+
+	var_tokens = wordpunct_tokenize(var_stops)
 
 	result = pos_tag(var_tokens)
 
@@ -97,13 +103,13 @@ def process(var_summary):
 	return sorted(result)
         
 summarys = [
-"Connect the Hasselblad camera and click the camera icon at the same time to enter the camera, suggesting that the camera can not be connected (always)",
-"MotCamera fails to open when either front or back camera isn't available",
-"Camera crashes when ROI is activated and you take an HDR capture",
-"Limit concurrent MCF captures to only dual camera use cases",
-"Camera MCF reproc requests are being received after capture session completes",
-"Investigate further memory reduction for MCF camera use cases",
-"Camera fails to capture pictures using MCF and front camera"
+"Bt headset/speaker state in Classic BT remains \"Connecting\" after turn off MBA",
+"irrespective screen observe while we sharing any file via Bluetooth",
+"Bluetooth is turned off in setting but Bluetooth functionality is working",
+"Presetup ANR:First connected BT headset then disconnect 'Bluetooth Share' isn't responding",
+"Enhanced Bluetooth logging for random BT crashes",
+"Bluetooth keyboard can not click Select phone settings in the \"more\" series of operations",
+"SettingsSound-Change each connected BT device's volume and fold->unfold the connected BT devices list, the volume value will change during fold->unfold"
 ]
 
 
@@ -185,7 +191,8 @@ def general_dictionary():
    		 print(k, v)
 #   		 dict_final.extend(v)
 	print(dict_final)
-general_dictionary()
+
+print(postaging(summarys))
 
 
  
