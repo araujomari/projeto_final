@@ -1,0 +1,218 @@
+About Phone
+AC2.0 VoWIfi
+Accessibility
+Accounts
+Acessories - 3.5mm Headset, Charger, SD Card
+Acessories - Watches
+Acessories - Wireless Charger
+Actions
+Advanced Calling
+AFW
+Airplane Mode
+Alexa
+Allo
+AMPs structure 
+Android Auto
+Android Pay
+Android Wear
+AOD
+AoV
+App Management
+App Management  - BR Apps
+App Standby
+Audio Codec
+Audio Effects / Equaliser
+Audio Manager
+Auto backup for Apps
+Auto Rotate (Landscape)
+Backup & Restore
+Battery
+Best Shot
+BLE
+Blocked Number
+Bookmark
+Bootloader
+Bootloader unlock
+BOTA
+Browser
+BT (File transfer, OPP...)
+BT  Acessories
+BT car kit
+Bundled notifications
+Calculator
+Calendar
+Call Stability
+Camera App
+Camera Beutification
+Camera Pro mode
+Cardock
+CBS
+Cell Broadcast
+Chrome
+Chromecast
+Clock
+Command Center
+Concert
+Conference Call
+Connectivity
+Contacts
+Data saver
+Data Usage
+Date and Time
+Daydream
+Demo Mode
+Device Management
+Dialer
+Display
+Doze Mode
+Drive
+DRM
+Dual Sim - Calling
+Dual Sim - Data
+Dual Sim - Emergency Call
+Dual Sim - Messaging
+Dual Sim - Pin lock
+Dual Sim - RingTone
+Dual Sim - Roaming
+Dual Sim - Settings
+Dual Sim - Setup Wizard
+Dual Sim - STK
+Duo
+EAP Aka
+EAP Sim
+Easy Prefix
+Email account - Exchange
+Email account - IMAP4
+Email account - POP3
+EMAIL App
+Emergency Call
+Emergency Call list
+Emergency Info
+Encryption
+Enhanced N-Way Call
+Espresso / Incipio
+Factory Reset
+Filemanager
+File System -  External
+File System - Internal
+FM Radio
+FPS
+Gamepad
+General_Settings
+Gmail
+Google App
+Google Cloud Print
+Google Dialer
+Google Earth
+Google Keep
+Google Now
+Google Plus
+Google Translate
+Google Wallet
+Gphotos
+GPS
+Hangouts
+Help / Guide Me
+hyphenation
+Image Codec
+IME
+Incipio + Wireless Charging
+Instaprint
+Kill Switch
+Launcher
+LBS
+LCB
+LenovoID
+Local Print
+Lock Screen
+Logging
+Managed Profile
+MAP
+Media scanner
+Message+
+Message Settings
+MHS
+Microscreen
+MMS
+Modem
+Mophie
+MotCare/Help
+Moto Actions
+Moto Alexa
+Moto Apps - Setup & Notif
+Moto Folio
+Moto Guard
+Moto Key
+Moto Privacy
+Moto UI
+MTP
+Multi-Endpoint
+Multi-tasking
+Multiuser
+Multi Window
+Music
+My VZW
+Network Mode
+NFC
+Notification importance
+Notifications
+OMA CP
+OTG
+Play Books
+Play Movies
+Play Store
+Projector
+Quick Settings
+RCS
+Recent Apps
+Recovery Mode
+Red Carpet
+Roaming
+Runtime Permissions
+Safe Mode
+Screen Pinning
+Screen Saver
+Search
+Sensor
+Settings
+Setup Wizard
+Sim contacts
+SIM detection
+SIM lock
+Smart Lock
+Smart Sim
+SMS
+SMS Enconding
+Sound
+SoundBoost2
+STK
+Streaming
+Style shell
+Style Shell + Wireless Charging
+Suggested Settings
+Tethering
+Time and Weather
+Trusted Device
+TTY
+Turbo
+Video Call
+Video Codec
+Voice Call
+Voice Quality
+VoLTE
+VoLTE Conference Call
+VoLTE Voice Call
+VoWIFI
+VPN 
+VT
+VVM
+WAP Push
+Wi-Fi Assistant
+Wifi 2.4 Ghz
+WIfi 5 GHz
+WIFI Direct
+Wireless Sound System 
+Youtube
+
+
+
