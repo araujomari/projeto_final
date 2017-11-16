@@ -172,17 +172,18 @@ def general_dictionary():
 	
 	dict_partial = defaultdict(list)
 	for k, v in chain(dict1.items(), dict2.items()):
-    		dict_partial[k].append(v)
+    		dict_partial[k].extend(v)
 
 	dict_geral = defaultdict(list)
 	for k, v in chain(dict_partial.items(), dict3.items()):
-    		dict_geral[k].append(v)
+    		dict_geral[k].extend(v)
 
 #	for k, v in dict_geral.items():
 #   		 print(k, v)
 	dict_final = []
 	for k, v in dict_geral.items():
-   		 dict_final.extend(v)
+   		 print(k, v)
+#   		 dict_final.extend(v)
 	print(dict_final)
 general_dictionary()
 
