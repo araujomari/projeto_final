@@ -54,16 +54,12 @@ def concat_list(lista):
 	return result
 	
 def postaging(sentence):
-	var_clear = []
-	for item in sentence:
-		var_clear.append(clean_text(item))		
+	var_clear = clean_text(sentence)		
 
-	var_stops = ""
-	for item in var_clear:
-		var_stops += " " + remove_stop_words(item)
-
+	var_stops = remove_stop_words(var_clear)
+		
 	var_tokens = wordpunct_tokenize(var_stops)
-
+	
 	result = pos_tag(var_tokens)
 
 	var_nn = []
@@ -192,8 +188,8 @@ def general_dictionary():
 #   		 dict_final.extend(v)
 	print(dict_final)
 
-print(postaging(summarys))
-
+general_dictionary()
+#print(nn_sorted(summarys))
 
  
 
