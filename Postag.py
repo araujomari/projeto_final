@@ -213,9 +213,9 @@ def dictionary_bigrams():
 
     for item in nn_list_sorted(summarys):
         output = [word for word in nn_sorted2(summarys) if all(letter in word for letter in set(item))]
-        print(str(item) + " => " + str(output))
+        # print(str(item) + " => " + str(output))
         # var_test = (difflib.get_close_matches(item, nn_sorted2(summarys)))
-        # sinonimos_gerais[item] = var_test
+        sinonimos_gerais[item] = output
     # test = sorted(set(sinonimos))
 
     return sinonimos_gerais
@@ -223,16 +223,18 @@ def dictionary_bigrams():
 def dictionary_trigrams():
     sinonimos_gerais = {}
     for item in nn_list_sorted(summarys):
-        var_test = (difflib.get_close_matches(item, nn_sorted3(summarys)))
-        sinonimos_gerais[item] = var_test
+        output = [word for word in nn_sorted3(summarys) if all(letter in word for letter in set(item))]
+        # var_test = (difflib.get_close_matches(item, nn_sorted3(summarys)))
+        sinonimos_gerais[item] = output
     # test = sorted(set(sinonimos))
     return sinonimos_gerais
 
 def dictionary_mongrams():
     sinonimos = {}
     for item in nn_list_sorted(summarys):
-        var_test = (difflib.get_close_matches(item, nn_list_sorted(summarys)))
-        sinonimos[item] = var_test
+        output = [word for word in nn_list_sorted(summarys) if all(letter in word for letter in set(item))]
+        # var_test = (difflib.get_close_matches(item, nn_list_sorted(summarys)))
+        sinonimos[item] = output
     # test = sorted(set(sinonimos))
     return sinonimos
 
@@ -248,8 +250,9 @@ def nn_concat():
 def dictionary_nn_concat():
     sinonimos = {}
     for item in nn_list_sorted(summarys):
-        var_test = (difflib.get_close_matches(item, nn_concat()))
-        sinonimos[item] = var_test
+        output = [word for word in nn_concat() if all(letter in word for letter in set(item))]
+        # var_test = (difflib.get_close_matches(item, nn_concat()))
+        sinonimos[item] = output
     # test = sorted(set(sinonimos))
     return sinonimos
 
@@ -293,8 +296,8 @@ def general_dictionary():
     #	for k, v in dict_geral.items():
     #   		 print(k, v)
     #	dict_final = []
-    # for k, v in dict_geral.items():
-    #    print(k, v)
+    for k, v in dict_geral.items():
+       print(k, v)
     #   		 dict_final.extend(v)
     #print(dict_geral)
     identify_initials(dict_final)
