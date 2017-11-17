@@ -1,79 +1,121 @@
 from nltk import pos_tag
 from nltk.tokenize import word_tokenize
 import nltk
+import difflib
 from nltk import word_tokenize
 from nltk.corpus import stopwords
 from nltk.tokenize import wordpunct_tokenize
 from unicodedata import normalize
+
 stop = set(stopwords.words('english'))
 import re
 
 SPECIAL_CHARS = ['¹', '²', '³', '→', 'ø', 'þ', '´', 'æ', 'ß', 'ð', 'đ', 'ŋ', 'ħ',
-                           'ł', '«', '»', '©', 'µ', '·', '$', '%', '¬', '¢', '£', 'º',
-                           'ª', '§', '°', '^', '~', '`', '_', '=', '\\', '.', '!', '?', ':',
-                           ';', ',', '-', '\/', '@', '#', '$', '%', '*', '&', '(', ')', '+',
-                           '\"', '\'', '{', '}', '[', ']', '<', '>','¶','®','"','、','：','”','“',
-                           '⁏','⦂⦂‧','‥','…','•','‘','’','‛','‟','‧','¨','․','꞉',':','⁚','⁝','⁞','⁃']
+                 'ł', '«', '»', '©', 'µ', '·', '$', '%', '¬', '¢', '£', 'º',
+                 'ª', '§', '°', '^', '~', '`', '_', '=', '\\', '.', '!', '?', ':',
+                 ';', ',', '-', '\/', '@', '#', '$', '%', '*', '&', '(', ')', '+',
+                 '\"', '\'', '{', '}', '[', ']', '<', '>', '¶', '®', '"', '、', '：', '”', '“',
+                 '⁏', '⦂⦂‧', '‥', '…', '•', '‘', '’', '‛', '‟', '‧', '¨', '․', '꞉', ':', '⁚', '⁝', '⁞', '⁃']
 
 
 def remove_stop_words(text):
-	## Stopword advanced list
-	arrayStopList = []
-	stopListExtra = open("stopwords.txt", 'r')
-	for i in stopListExtra.readlines():
-	    arrayStopList.append(i.replace('\n', ""))
-	stop.update(arrayStopList)
-	result = ' '.join([word for word in text.split() if word not in stop])
-	return result
+    ## Stopword advanced list
+    arrayStopList = []
+    stopListExtra = open("stopwords.txt", 'r')
+    for i in stopListExtra.readlines():
+        arrayStopList.append(i.replace('\n', ""))
+    stop.update(arrayStopList)
+    result = ' '.join([word for word in text.split() if word not in stop])
+    return result
+
 
 def clean_text(txt):
-	'''
-	Method for cleaning special characters
-	List of characters to be removed;
-	'''
-	txt_without_acentuation =  normalize('NFKD', txt)
-	result = '[' + re.escape(''.join(SPECIAL_CHARS)) + ']'
-	# Characters added to chars_to_remove will be replaced by an empty space
-	documents = re.sub(result, ' ', txt_without_acentuation)
-	return documents
+    '''
+    Method for cleaning special characters
+    List of characters to be removed;
+    '''
+    txt_without_acentuation = normalize('NFKD', txt)
+    result = '[' + re.escape(''.join(SPECIAL_CHARS)) + ']'
+    # Characters added to chars_to_remove will be replaced by an empty space
+    documents = re.sub(result, ' ', txt_without_acentuation)
+    return documents
 
 
 def nouns(text):
-	context = []	
-	for item in range(len(text)):
-		for item2 in range(len(text)):
-			if text[item] != text[item2]:
-				context.append(text[item] + " " + text[item2])
-	return context
-	
+    context = []
+    for item in range(len(text)):
+        for item2 in range(len(text)):
+            for item3 in range(len(text)):
+                if text[item] != text[item2] and text[item] != text[item3] and text[item2] != text[item3]:
+                    context.append(text[item] + " " + text[item2] + " " + text[item3])
+    return context
+
+
 def concat_list(lista):
-	result = []
-	for item in lista:
-		result = nouns(item)
-		result.extend(process(item))
-	return result
-	
+    result = []
+    for item in lista:
+        result = nouns(item)
+        result.extend(process(item))
+    return result
+
+
+def postaging_bigram(sentence):
+    var_clear = clean_text(sentence)
+
+    var_stops = remove_stop_words(var_clear)
+
+    var_tokens = wordpunct_tokenize(var_stops)
+
+    result = pos_tag(var_tokens)
+
+    var_nn = []
+
+    for (w1, t1), (w2, t2) in nltk.bigrams(result):
+        if t1.startswith('NN') and t2.startswith('NN'):
+            if w1.lower() != w2.lower():
+                var_nn.append(w1.lower() + " " + w2.lower())
+
+    return var_nn
+
+def postaging_trigram(sentence):
+    var_clear = clean_text(sentence)
+
+    var_stops = remove_stop_words(var_clear)
+
+    var_tokens = wordpunct_tokenize(var_stops)
+
+    result = pos_tag(var_tokens)
+    var_nn = []
+
+    for (w1, t1), (w2, t2), (w3, t3) in nltk.trigrams(result):
+        if t1.startswith('NN') and t2.startswith('NN') and t3.startswith('NN'):
+            if w1.lower() != w2.lower() and w1.lower() != w3.lower() and w3.lower() != w2.lower():
+                var_nn.append(w1.lower() + " " + w2.lower() + " " + w3.lower())
+
+    return var_nn
+
+
 def postaging(sentence):
-	var_clear = clean_text(sentence)		
+    var_clear = clean_text(sentence)
 
-	var_stops = remove_stop_words(var_clear)
-		
-	var_tokens = wordpunct_tokenize(var_stops)
-	
-	result = pos_tag(var_tokens)
+    var_stops = remove_stop_words(var_clear)
 
-	var_nn = []
-	for (w1, t1) in result:
-		if(t1.startswith('NN')):
-			var_nn.append(w1.lower())	
-	
-	return var_nn
-				
+    var_tokens = wordpunct_tokenize(var_stops)
+
+    result = pos_tag(var_tokens)
+    var_nn = []
+    for (w1, t1) in result:
+        if (t1.startswith('NN')):
+            var_nn.append(w1.lower())
+
+    return var_nn
+
+
 #	for item in range(len(var_nn)):
 #		for item2 in range(len(var_nn)):
 #			if var_nn[item] != var_nn[item2]:
 #				context.append(var_nn[item] + " " + var_nn[item2])
-					
+
 #		if(t1.startswith('V') and t2.startswith('NN')):
 #			result = w1 + " " + w2
 #			context.append(result)
@@ -91,108 +133,173 @@ def postaging(sentence):
 #			context.append(result)
 
 #	return context
-        
-        
-        
+
+
+
 def process(var_summary):
-	result = nouns(var_summary)
-	return sorted(result)
-        
+    result = nouns(var_summary)
+    return sorted(result)
+
+
 summarys = [
-"Bt headset/speaker state in Classic BT remains \"Connecting\" after turn off MBA",
-"irrespective screen observe while we sharing any file via Bluetooth",
-"Bluetooth is turned off in setting but Bluetooth functionality is working",
-"Presetup ANR:First connected BT headset then disconnect 'Bluetooth Share' isn't responding",
-"Enhanced Bluetooth logging for random BT crashes",
-"Bluetooth keyboard can not click Select phone settings in the \"more\" series of operations",
-"SettingsSound-Change each connected BT device's volume and fold->unfold the connected BT devices list, the volume value will change during fold->unfold"
+    "Fingerprint can not lock screen after input fps first time",
+    "On FPS screen, device unlocked instead of FPS getting authenticated",
+    "Dialog as 'Set up fingerprint sensor?' is not displayed immediately while tapping on Fingerprint sensor",
+    "After FDR,tap any finger on FPS but the FPS is not responding",
+    "One nav features not working on Fingerprint page",
+    "Press FPS to lock the phone,FPS tutorial icon is not shown on AoD",
+    "Saved fingerprint alignment is not showing properly in Fingerprint settings",
+    "On FPS screen, device unlocked instead of FPS getting authenticated"
 ]
 
 
 def nn_sorted(summarys):
-	result = []
-	result_pos = []
+    result = []
+    result_pos = []
 
-	for item in summarys:
-		result_pos.append(postaging(item))
-		for item in result_pos:
-			result.extend(nouns(item))
-		final_result = sorted(set(result))
-	return final_result
+    for item in summarys:
+        result_pos.append(postaging_bigram(item))
+        for item in result_pos:
+            if item is not None:
+                result.extend(nouns(item))
+        final_result = sorted(set(result))
+
+    return final_result
 
 
-import difflib
+def nn_sorted2(summarys):
+    result_pos = []
+
+    for item in summarys:
+        result_pos.append(postaging_bigram(item))
+
+    list2 = [x for x in result_pos if x != []]
+
+    partial_result = []
+    for item in list2:
+        partial_result.extend(item)
+
+    final_result = sorted(set(partial_result))
+
+    return final_result
+
+def nn_sorted3(summarys):
+    result_pos = []
+
+    for item in summarys:
+        result_pos.append(postaging_trigram(item))
+
+    list2 = [x for x in result_pos if x != []]
+
+    partial_result = []
+    for item in list2:
+        partial_result.extend(item)
+
+    final_result = sorted(set(partial_result))
+    return final_result
 
 var_test = []
 
 def nn_list_sorted(summarys):
-	post = []
-	for item in summarys:
-		post.extend(postaging(item))
-		var_no_repets = sorted(set(post))
-	return var_no_repets
+    post = []
+    for item in summarys:
+        post.extend(postaging(item))
+        var_no_repets = sorted(set(post))
+    return var_no_repets
+
 
 def dictionary_bigrams():
-	sinonimos_gerais = {}
-	for item in nn_list_sorted(summarys):
-		var_test = (difflib.get_close_matches(item, nn_sorted(summarys)))
-		sinonimos_gerais[item] = var_test
-	#	test = sorted(set(sinonimos))
-	return sinonimos_gerais
+    sinonimos_gerais = {}
+
+    for item in nn_list_sorted(summarys):
+        output = [word for word in nn_sorted2(summarys) if all(letter in word for letter in set(item))]
+        print(str(item) + " => " + str(output))
+        # var_test = (difflib.get_close_matches(item, nn_sorted2(summarys)))
+        # sinonimos_gerais[item] = var_test
+    # test = sorted(set(sinonimos))
+
+    return sinonimos_gerais
+
+def dictionary_trigrams():
+    sinonimos_gerais = {}
+    for item in nn_list_sorted(summarys):
+        var_test = (difflib.get_close_matches(item, nn_sorted3(summarys)))
+        sinonimos_gerais[item] = var_test
+    # test = sorted(set(sinonimos))
+    return sinonimos_gerais
 
 def dictionary_mongrams():
-	sinonimos = {}
-	for item in nn_list_sorted(summarys):
-		var_test = (difflib.get_close_matches(item, nn_list_sorted(summarys)))
-		sinonimos[item] = var_test
-	#	test = sorted(set(sinonimos))
-	return sinonimos
+    sinonimos = {}
+    for item in nn_list_sorted(summarys):
+        var_test = (difflib.get_close_matches(item, nn_list_sorted(summarys)))
+        sinonimos[item] = var_test
+    # test = sorted(set(sinonimos))
+    return sinonimos
+
 
 def nn_concat():
-	concatene_word = []
-	for item in nn_sorted(summarys):
-		concatene_word.append(item.replace(" ",''))
-		concatene_no_repets = sorted(set(concatene_word))
-	return concatene_no_repets
+    concatene_word = []
+    for item in nn_sorted2(summarys):
+        concatene_word.append(item.replace(" ", ''))
+        concatene_no_repets = sorted(set(concatene_word))
+    return concatene_no_repets
+
 
 def dictionary_nn_concat():
-	sinonimos = {}
-	for item in nn_list_sorted(summarys):
-		var_test = (difflib.get_close_matches(item, nn_concat()))
-		sinonimos[item] = var_test
-	#	test = sorted(set(sinonimos))
-	return sinonimos
+    sinonimos = {}
+    for item in nn_list_sorted(summarys):
+        var_test = (difflib.get_close_matches(item, nn_concat()))
+        sinonimos[item] = var_test
+    # test = sorted(set(sinonimos))
+    return sinonimos
+
 
 from itertools import chain
 from collections import defaultdict
 
+
+def identify_initials(dicionario):
+    var_letters = []
+    var_words = []
+
+    for k, v in dicionario.items():
+        if len(k) <= 3:
+            var_letters.append(k)
+        var_words.extend(v)
+
+    for item in var_letters:
+        output = [word for word in var_words if all(letter in word for letter in set(item))]
+        #print(str(item) + " => " + str(output))
+
+
 def general_dictionary():
+    dict1 = dictionary_bigrams()
+    dict2 = dictionary_mongrams()
+    dict3 = dictionary_nn_concat()
+    dict4 = dictionary_trigrams()
 
-	dict1 = dictionary_bigrams()
-	dict2 = dictionary_mongrams()
-	dict3 = dictionary_nn_concat()
-	
-	dict_partial = defaultdict(list)
-	for k, v in chain(dict1.items(), dict2.items()):
-    		dict_partial[k].extend(v)
+    dict_partial = defaultdict(list)
+    for k, v in chain(dict1.items(), dict2.items()):
+        dict_partial[k].extend(v)
 
-	dict_geral = defaultdict(list)
-	for k, v in chain(dict_partial.items(), dict3.items()):
-    		dict_geral[k].extend(v)
+    dict_geral = defaultdict(list)
+    for k, v in chain(dict_partial.items(), dict3.items()):
+        dict_geral[k].extend(v)
 
-#	for k, v in dict_geral.items():
-#   		 print(k, v)
-	dict_final = []
-	for k, v in dict_geral.items():
-   		 print(k, v)
-#   		 dict_final.extend(v)
-	print(dict_final)
+    dict_final = defaultdict(list)
+    for k, v in chain(dict_geral.items(), dict4.items()):
+        dict_final[k].extend(v)
+
+    #	for k, v in dict_geral.items():
+    #   		 print(k, v)
+    #	dict_final = []
+    # for k, v in dict_geral.items():
+    #    print(k, v)
+    #   		 dict_final.extend(v)
+    #print(dict_geral)
+    identify_initials(dict_final)
+
+#	return dict_geral
 
 general_dictionary()
-#print(nn_sorted(summarys))
-
- 
-
-
-
-
+# print(nn_sorted(summarys))
