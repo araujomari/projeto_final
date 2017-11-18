@@ -293,16 +293,42 @@ def general_dictionary():
     for k, v in chain(dict_geral.items(), dict4.items()):
         dict_final[k].extend(v)
 
-    #	for k, v in dict_geral.items():
-    #   		 print(k, v)
+    # for k, v in dict_geral.items():
+    #      print(k, v)
     #	dict_final = []
-    for k, v in dict_geral.items():
-       print(k, v)
+    # for k, v in dict_geral.items():
+    #    print(k, v)
     #   		 dict_final.extend(v)
     #print(dict_geral)
     identify_initials(dict_final)
+    return dict_final
 
-#	return dict_geral
+import difflib
+import Levenshtein
 
-general_dictionary()
+def dict_fusion():
+    # dict_list = ['fingerprint','finger','fdr']
+    # var_sentence = 'fp'
+    # output = [word for word in dict_list if all(letter in word for letter in var_sentence)]
+    var_test = []
+
+    dict_general = general_dictionary()
+    dict_general2 = general_dictionary()
+    for indice, item in enumerate(dict_general):
+        for indice2, item2 in enumerate(dict_general2):
+            result = Levenshtein.ratio(item,item2)
+            if result < 1.0 and result > 0.5:
+                print(str(indice) + " => " + str(indice2) )
+                dict1 = dict_general[item]
+                dict2 = dict_general2[item2]
+                var_test.append(set(dict1).intersection(dict2))
+                dict_general2 = {}.fromkeys([item2],'NADA')
+
+    print(var_test)
+
+
+dict_fusion()
+#general_dictionary()
 # print(nn_sorted(summarys))
+
+
