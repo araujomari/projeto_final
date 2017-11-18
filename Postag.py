@@ -293,8 +293,8 @@ def general_dictionary():
     for k, v in chain(dict_geral.items(), dict4.items()):
         dict_final[k].extend(v)
 
-    # for k, v in dict_geral.items():
-    #      print(k, v)
+    for k, v in dict_geral.items():
+         print(k, v)
     #	dict_final = []
     # for k, v in dict_geral.items():
     #    print(k, v)
@@ -327,8 +327,8 @@ def dict_fusion():
     print(var_test)
 
 
-dict_fusion()
-#general_dictionary()
+#dict_fusion()
+general_dictionary()
 # print(nn_sorted(summarys))
 
 
