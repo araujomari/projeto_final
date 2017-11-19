@@ -7,6 +7,7 @@ from nltk.corpus import stopwords
 from nltk.tokenize import wordpunct_tokenize
 from unicodedata import normalize
 
+
 stop = set(stopwords.words('english'))
 import re
 
@@ -337,12 +338,38 @@ def dict_fusion(dicionario):
     p = dict(a, **var_test)
     return p
 
+def initial_retrieve(dicionario):
+    terms = []
+    regex = ''
+    for indece, item in enumerate(dicionario):
+        if len(item) == 3:
+            regex = '\\b[' + str(item[0][:1]) + '].{0,}[' + str(item[1][:1]) + '].{0,}[' + str(item[2][:1]) +']\w*| \\b['+ str(item[0][:1]) + '].{0,}[' + str(item[1][:1]) + ']\\w*'
+            for x in dicionario[item]:
+                rx = re.compile(regex)
+                result = rx.match(x)
+                if result is not None:
+                    print(str(item) + "=> {}".format(result.group(0)))
+        elif len(item) == 2:
+            regex.append(r'\b[' + str(item[0][:1]) + '].{0,}[' + str(item[1][:1]) + ']')
+
+
+
+
+
+    # for indece, item in enumerate(dicionario):
+    #     if len(item) == 3 or len(item) == 2:
+    #
+    #         print(str(item) + ": " + str(output))
+
+    # print(regex)
 
 
 r = dict_fusion(general_dictionary())
+initial_retrieve(r)
 
-for k, v in r.items():
-    print(k,v)
+#
+# for k, v in r.items():
+#     print(k,v)
 #general_dictionary()
 # print(nn_sorted(summarys))
 
