@@ -188,10 +188,8 @@ summarys = [
     "Alexa wake-word can not trigger during Moto Display voice reply",
     "Quick Reply & Vocie Reply does not work properly in Landscape Mode",
     "Camera no responding is observed during the Camera Stress test",
-    "Confirm button does not respond and system app crash",
-    "After respond a SMS via direct reply, the background screen closes",
-    "calling screen goes to background after replying to a sms in notifications",
-    "Reply by voice not getting cancelled after error",
+    "Camera ANR when launch camera",
+    "Camera viewfinder display blank screen and ANR when launch Camera"
 
 ]
 
@@ -338,8 +336,8 @@ def general_dictionary():
     for k, v in chain(dict_geral.items(), dict4.items()):
         dict_final[k].extend(v)
 
-    for k, v in dict_geral.items():
-         print(k, v)
+    # for k, v in dict_geral.items():
+    #      print(k, v)
     #	dict_final = []
     # for k, v in dict_geral.items():
     #    print(k, v)
@@ -415,9 +413,17 @@ def initial_retrieve(dicionario):
             string = ''
             t = []
 
+    for indece, item in enumerate(terms):
+        for k, v in dicionario.items():
+            if k == item:
+                dicionario[k] = ['None']
+
+    for k, v in dicionario.items():
+        print(k, v)
 
     for k, v in terms.items():
         print(k, v)
+
 
 
 

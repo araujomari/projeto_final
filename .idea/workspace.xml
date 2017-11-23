@@ -16,8 +16,8 @@
       <file leaf-file-name="Postag.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Postag.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="409" column="38" lean-forward="false" selection-start-line="409" selection-start-column="38" selection-end-line="409" selection-end-column="38" />
+            <state relative-caret-position="286">
+              <caret line="422" column="0" lean-forward="true" selection-start-line="422" selection-start-column="0" selection-end-line="422" selection-end-column="0" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
@@ -272,8 +272,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Postag.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="409" column="38" lean-forward="false" selection-start-line="409" selection-start-column="38" selection-end-line="409" selection-end-column="38" />
+        <state relative-caret-position="286">
+          <caret line="422" column="0" lean-forward="true" selection-start-line="422" selection-start-column="0" selection-end-line="422" selection-end-column="0" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>
