@@ -192,7 +192,7 @@ summarys = [
     "After respond a SMS via direct reply, the background screen closes",
     "calling screen goes to background after replying to a sms in notifications",
     "Reply by voice not getting cancelled after error",
-   
+
 ]
 
 
@@ -395,20 +395,19 @@ def initial_retrieve(dicionario):
                 rx = re.compile(regex)
                 result = rx.match(x)
                 if result is not None:
-                    print(str(item) + "=> {}".format(result.group(0)))
                     string += "," + result.group(0)
             s = string.split(',')
             t.extend(set(s))
             terms[item] = list(filter(None,t))
             string = ''
             t = []
+
         elif len(item) == 2:
-            regex.append(r'\b[' + str(item[0][:1]) + '].{0,}[' + str(item[1][:1]) + ']')
+            regex = '\\b[' + str(item[0][:1]) + '].{0,}[' + str(item[1][:1]) + ']\*w'
             for x in dicionario[item]:
                 rx = re.compile(regex)
                 result = rx.match(x)
                 if result is not None:
-                    print(str(item) + "=> {}".format(result.group(0)))
                     string += "," + result.group(0)
             s = string.split(',')
             t.extend(set(s))
@@ -430,13 +429,13 @@ def initial_retrieve(dicionario):
     # print(regex)
 
 
-# r = dict_fusion(general_dictionary())
-# initial_retrieve(r)
+r = dict_fusion(general_dictionary())
+initial_retrieve(r)
 
 #
 # for k, v in r.items():
 #     print(k,v)
-general_dictionary()
+#general_dictionary()
 # print(nn_sorted(summarys))
 
 
