@@ -76,6 +76,10 @@ def postaging_bigram(sentence):
             if w1.lower() != w2.lower():
                 var_nn.append(w1.lower() + " " + w2.lower())
 
+        # if (t1.startswith('NN') and t2.startswith('V')):
+        #     if w1.lower() != w2.lower():
+        #         var_nn.append(w1.lower() + " " + w2.lower())
+
     return var_nn
 
 def postaging_trigram(sentence):
@@ -90,6 +94,14 @@ def postaging_trigram(sentence):
 
     for (w1, t1), (w2, t2), (w3, t3) in nltk.trigrams(result):
         if t1.startswith('NN') and t2.startswith('NN') and t3.startswith('NN'):
+            if w1.lower() != w2.lower() and w1.lower() != w3.lower() and w3.lower() != w2.lower():
+                var_nn.append(w1.lower() + " " + w2.lower() + " " + w3.lower())
+
+        if t1.startswith('NN') and t2.startswith('RB') and t3.startswith('V'):
+            if w1.lower() != w2.lower() and w1.lower() != w3.lower() and w3.lower() != w2.lower():
+                var_nn.append(w1.lower() + " " + w2.lower() + " " + w3.lower())
+
+        if t1.startswith('NN') and t2.startswith('NN') and t3.startswith('V'):
             if w1.lower() != w2.lower() and w1.lower() != w3.lower() and w3.lower() != w2.lower():
                 var_nn.append(w1.lower() + " " + w2.lower() + " " + w3.lower())
 
@@ -142,16 +154,47 @@ def process(var_summary):
     return sorted(result)
 
 
+# summarys = [
+#     "Fingerprint can not lock screen after input fps first time",
+#     "On FPS screen, device unlocked instead of FPS getting authenticated",
+#     "Dialog as 'Set up fingerprint sensor?' is not displayed immediately while tapping on Fingerprint sensor",
+#     "After FDR,tap any finger on FPS but the FPS is not responding",
+#     "One nav features not working on Fingerprint page",
+#     "Press FPS to lock the phone,FPS tutorial icon is not shown on AoD",
+#     "Saved fingerprint alignment is not showing properly in Fingerprint settings",
+#     "On FPS screen, device unlocked instead of FPS getting authenticated"
+# ]
+
 summarys = [
-    "Fingerprint can not lock screen after input fps first time",
-    "On FPS screen, device unlocked instead of FPS getting authenticated",
-    "Dialog as 'Set up fingerprint sensor?' is not displayed immediately while tapping on Fingerprint sensor",
-    "After FDR,tap any finger on FPS but the FPS is not responding",
-    "One nav features not working on Fingerprint page",
-    "Press FPS to lock the phone,FPS tutorial icon is not shown on AoD",
-    "Saved fingerprint alignment is not showing properly in Fingerprint settings",
-    "On FPS screen, device unlocked instead of FPS getting authenticated"
+    "App Not Responding observed while running monkey test on Moto App\n\nMore details",
+    "Parts of the screen was not responding. B2GID:205719841",
+    "MMS read-reply report option is not available on Messenger APP.",
+    "App not responding on first boot (pre-setup failure)",
+    "The browser does not respond after scanning the QR code in the Gallery.(Rarely)",
+    "Touch screen stopped working in weatherbug app B2GID:199586491",
+    "DUT record video in SMS,appear 'the Camera does not respond'.",
+    "DUT adds a local photo or video, the SMS interface does not respond",
+    "Voice / APP doesnt respond to touch if there is no calendar event",
+    "Music is not heard through BT headset and watch crashes after starting playing music offline",
+    "Application Not Respond message is displayed saving a MID file from MMS",
+    "No return after record a message via Voice Reply and say 'Send it'",
+    "Alexa does not respond after training #2 B2GID:300380477",
+    "Changing Mod voice recognition to 'Responds to Only Me' still others are able to trigger into Alexa app",
+    "Camera does not respond during change resolution to  VGA 480p.",
+    "Factory data reset and power on,it appears Lenovo Help is not responding",
+    "An incoming video call comes when full-screen video is playing, there is no option on interface of incoming call to change into voice answer",
+    "Ms outlook behaves weird or not responding on keyboard",
+    "'Maps isn't responding' pop up when select app",
+    "Alexa wake-word can not trigger during Moto Display voice reply",
+    "Quick Reply & Vocie Reply does not work properly in Landscape Mode",
+    "Camera no responding is observed during the Camera Stress test",
+    "Confirm button does not respond and system app crash",
+    "After respond a SMS via direct reply, the background screen closes",
+    "calling screen goes to background after replying to a sms in notifications",
+    "Reply by voice not getting cancelled after error",
+   
 ]
+
 
 
 def nn_sorted(summarys):
@@ -205,13 +248,14 @@ def nn_list_sorted(summarys):
     post = []
     for item in summarys:
         post.extend(postaging(item))
+        postaging(item)
         var_no_repets = sorted(set(post))
     return var_no_repets
 
 
+
 def dictionary_bigrams():
     sinonimos_gerais = {}
-
     for item in nn_list_sorted(summarys):
         output = [word for word in nn_sorted2(summarys) if all(letter in word for letter in set(item))]
         # print(str(item) + " => " + str(output))
@@ -294,8 +338,8 @@ def general_dictionary():
     for k, v in chain(dict_geral.items(), dict4.items()):
         dict_final[k].extend(v)
 
-    # for k, v in dict_geral.items():
-    #      print(k, v)
+    for k, v in dict_geral.items():
+         print(k, v)
     #	dict_final = []
     # for k, v in dict_geral.items():
     #    print(k, v)
@@ -339,8 +383,11 @@ def dict_fusion(dicionario):
     return p
 
 def initial_retrieve(dicionario):
-    terms = []
+    terms = {}
     regex = ''
+    t = []
+    string = ''
+    count = 0
     for indece, item in enumerate(dicionario):
         if len(item) == 3:
             regex = '\\b[' + str(item[0][:1]) + '].{0,}[' + str(item[1][:1]) + '].{0,}[' + str(item[2][:1]) +']\w*| \\b['+ str(item[0][:1]) + '].{0,}[' + str(item[1][:1]) + ']\\w*'
@@ -349,10 +396,29 @@ def initial_retrieve(dicionario):
                 result = rx.match(x)
                 if result is not None:
                     print(str(item) + "=> {}".format(result.group(0)))
+                    string += "," + result.group(0)
+            s = string.split(',')
+            t.extend(set(s))
+            terms[item] = list(filter(None,t))
+            string = ''
+            t = []
         elif len(item) == 2:
             regex.append(r'\b[' + str(item[0][:1]) + '].{0,}[' + str(item[1][:1]) + ']')
+            for x in dicionario[item]:
+                rx = re.compile(regex)
+                result = rx.match(x)
+                if result is not None:
+                    print(str(item) + "=> {}".format(result.group(0)))
+                    string += "," + result.group(0)
+            s = string.split(',')
+            t.extend(set(s))
+            terms[item] = list(filter(None,t))
+            string = ''
+            t = []
 
 
+    for k, v in terms.items():
+        print(k, v)
 
 
 
@@ -364,13 +430,13 @@ def initial_retrieve(dicionario):
     # print(regex)
 
 
-r = dict_fusion(general_dictionary())
-initial_retrieve(r)
+# r = dict_fusion(general_dictionary())
+# initial_retrieve(r)
 
 #
 # for k, v in r.items():
 #     print(k,v)
-#general_dictionary()
+general_dictionary()
 # print(nn_sorted(summarys))
 
 

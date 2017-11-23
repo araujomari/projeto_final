@@ -78,9 +78,6 @@ c'mon
 c's
 came
 can
-can't
-cannot
-cant
 certain
 certainly
 clearly
@@ -104,18 +101,9 @@ definitely
 described
 despite
 did
-didn't
-didn
-didnt
 do
 does
-doesn't
-doesn
-doesnt
 doing
-don't
-don
-dont
 done
 downwards
 e
@@ -297,7 +285,6 @@ non
 none
 noone
 nor
-not
 nothing
 novel
 now
